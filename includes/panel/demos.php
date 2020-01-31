@@ -55,7 +55,7 @@ if (!class_exists('Yatri_Tools_Demos')) {
         {
             if (get_option('yatri_tools_plugin_do_activation_redirect', false)) {
                 delete_option('yatri_tools_plugin_do_activation_redirect');
-                exit(wp_redirect("themes.php?page=yatri-tools"));
+               // exit(wp_redirect("themes.php?page=yatri-tools"));
             }
         }
 
