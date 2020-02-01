@@ -496,10 +496,11 @@ if (!class_exists('Yatri_Tools_Demos')) {
             }
 
             // Get the selected demo
-            $demo_type = $_POST['yatri_tools_import_demo'];
+            $demo_type = sanitize_text_field($_POST['yatri_tools_import_demo']);
 
             // Get demos data
-            $demo = Yatri_Tools_Demos::get_demos_data()[$demo_type];
+            $all_demo = Yatri_Tools_Demos::get_demos_data();
+            $demo = isset($all_demo[$demo_type])?$all_demo[$demo_type]: array();
 
             // Content file
             $xml_file = isset($demo['xml_file']) ? $demo['xml_file'] : '';
@@ -543,10 +544,11 @@ if (!class_exists('Yatri_Tools_Demos')) {
             include YATRI_TOOLS_ABSPATH . 'includes/panel/classes/importers/class-settings-importer.php';
 
             // Get the selected demo
-            $demo_type = $_POST['yatri_tools_import_demo'];
+            $demo_type = sanitize_text_field($_POST['yatri_tools_import_demo']);
+            $all_demo = Yatri_Tools_Demos::get_demos_data();
 
-            // Get demos data
-            $demo = Yatri_Tools_Demos::get_demos_data()[$demo_type];
+            $demo = isset($all_demo[$demo_type])?$all_demo[$demo_type]: array();
+
 
             // Settings file
             $theme_settings = isset($demo['theme_settings']) ? $demo['theme_settings'] : '';
@@ -579,10 +581,10 @@ if (!class_exists('Yatri_Tools_Demos')) {
             include YATRI_TOOLS_ABSPATH . 'includes/panel/classes/importers/class-widget-importer.php';
 
             // Get the selected demo
-            $demo_type = $_POST['yatri_tools_import_demo'];
+            $demo_type = sanitize_text_field($_POST['yatri_tools_import_demo']);
+            $all_demo = Yatri_Tools_Demos::get_demos_data();
+            $demo = isset($all_demo[$demo_type])?$all_demo[$demo_type]: array();
 
-            // Get demos data
-            $demo = Yatri_Tools_Demos::get_demos_data()[$demo_type];
 
             // Widgets file
             $widgets_file = isset($demo['widgets_file']) ? $demo['widgets_file'] : '';
@@ -616,10 +618,11 @@ if (!class_exists('Yatri_Tools_Demos')) {
             if ($_POST['yatri_tools_import_is_xml'] === 'true') {
 
                 // Get the selected demo
-                $demo_type = $_POST['yatri_tools_import_demo'];
+                $demo_type = sanitize_text_field($_POST['yatri_tools_import_demo']);
 
                 // Get demos data
-                $demo = Yatri_Tools_Demos::get_demos_data()[$demo_type];
+                $all_demo = Yatri_Tools_Demos::get_demos_data();
+                $demo = isset($all_demo[$demo_type])?$all_demo[$demo_type]: array();
 
                 // Elementor width setting
                 $elementor_width = isset($demo['elementor_width']) ? $demo['elementor_width'] : '';
