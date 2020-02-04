@@ -104,7 +104,7 @@ if (!class_exists('Yatri_Tools_Demos')) {
             wp_enqueue_style('yatri-tools-demos-style', plugins_url('/assets/css/demos.css', __FILE__));
 
             // JS
-            wp_enqueue_script('yatri-tools-demos-js', plugins_url('/assets/js/demos.min.js', __FILE__), array('jquery', 'wp-util', 'updates'), '1.0', true);
+            wp_enqueue_script('yatri-tools-demos-js', plugins_url('/assets/js/demos.js', __FILE__), array('jquery', 'wp-util', 'updates'), '1.0', true);
 
             wp_localize_script('yatri-tools-demos-js', 'yatriToolsDemos', array(
                 'ajaxurl' => admin_url('admin-ajax.php'),
