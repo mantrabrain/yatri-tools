@@ -14,8 +14,8 @@ function yatri_tools_demo_data_config()
             'screenshot' => $demo_data_root_path . 'main/screenshot.png',
             'home_title' => 'Home',
             'blog_title' => 'Blog',
-            'posts_to_show' => '3',
-            'elementor_width' => '1220',
+            'posts_to_show' => '5',
+            'elementor_width' => '1140',
             'required_plugins' => array(
                 'free' => array(
                     array(
