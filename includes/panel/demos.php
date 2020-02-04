@@ -335,7 +335,7 @@ if (!class_exists('Yatri_Tools_Demos')) {
             </div>
 
             <div class="yatri-tools-last">
-                <h2>🎉 🎉 <?php esc_html_e('Congratulations', 'yatri-tools-toolkit'); ?> 🎉 🎉</h2>
+                <h2 style="font-size:45px;">🎉 🎉 <?php esc_html_e('Congratulations', 'yatri-tools-toolkit'); ?> 🎉 🎉</h2>
                 <h3><?php esc_html_e('Yatri Demo Imported!', 'yatri-tools-toolkit'); ?></h3>
                 <a href="<?php echo esc_url(get_home_url()); ?>"
                    target="_blank"><?php esc_html_e('View Your Site', 'yatri-tools-toolkit'); ?></a>

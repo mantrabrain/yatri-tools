@@ -7,7 +7,6 @@ project.properties
 .settings*
 .idea
 /svn-repository/
-/svn-repository1/
 
 # Grunt
 /node_modules/
