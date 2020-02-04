@@ -55,7 +55,7 @@ if (!class_exists('Yatri_Tools_Demos')) {
         {
             if (get_option('yatri_tools_plugin_do_activation_redirect', false)) {
                 delete_option('yatri_tools_plugin_do_activation_redirect');
-                // exit(wp_redirect("themes.php?page=yatri-tools"));
+               // exit(wp_redirect("themes.php?page=yatri-tools"));
             }
         }
 
@@ -335,7 +335,7 @@ if (!class_exists('Yatri_Tools_Demos')) {
             </div>
 
             <div class="yatri-tools-last">
-                <h2>🎉 🎉 <?php esc_html_e('Congratulations', 'yatri-tools-toolkit'); ?> 🎉 🎉</h2>
+                <h2><?php esc_html_e('Congratulations', 'yatri-tools-toolkit'); ?></h2>
                 <h3><?php esc_html_e('Yatri Demo Imported!', 'yatri-tools-toolkit'); ?></h3>
                 <a href="<?php echo esc_url(get_home_url()); ?>"
                    target="_blank"><?php esc_html_e('View Your Site', 'yatri-tools-toolkit'); ?></a>
@@ -389,7 +389,7 @@ if (!class_exists('Yatri_Tools_Demos')) {
                         // If premium plugins and not installed
                         if ('premium' == $return
                             && !file_exists(WP_PLUGIN_DIR . '/' . $plugin['init'])) { ?>
-                            <a class="button" href="https://wpyatri.com/extensions/"
+                            <a class="button" href="https://wpyatri.com/"
                                target="_blank"><?php esc_html_e('Get This Addon', 'yatri-tools-toolkit'); ?></a>
                             <?php
                         } else { ?>
@@ -500,7 +500,7 @@ if (!class_exists('Yatri_Tools_Demos')) {
 
             // Get demos data
             $all_demo = Yatri_Tools_Demos::get_demos_data();
-            $demo = isset($all_demo[$demo_type]) ? $all_demo[$demo_type] : array();
+            $demo = isset($all_demo[$demo_type])?$all_demo[$demo_type]: array();
 
             // Content file
             $xml_file = isset($demo['xml_file']) ? $demo['xml_file'] : '';
@@ -547,7 +547,7 @@ if (!class_exists('Yatri_Tools_Demos')) {
             $demo_type = sanitize_text_field($_POST['yatri_tools_import_demo']);
             $all_demo = Yatri_Tools_Demos::get_demos_data();
 
-            $demo = isset($all_demo[$demo_type]) ? $all_demo[$demo_type] : array();
+            $demo = isset($all_demo[$demo_type])?$all_demo[$demo_type]: array();
 
 
             // Settings file
@@ -583,7 +583,7 @@ if (!class_exists('Yatri_Tools_Demos')) {
             // Get the selected demo
             $demo_type = sanitize_text_field($_POST['yatri_tools_import_demo']);
             $all_demo = Yatri_Tools_Demos::get_demos_data();
-            $demo = isset($all_demo[$demo_type]) ? $all_demo[$demo_type] : array();
+            $demo = isset($all_demo[$demo_type])?$all_demo[$demo_type]: array();
 
 
             // Widgets file
@@ -622,7 +622,7 @@ if (!class_exists('Yatri_Tools_Demos')) {
 
                 // Get demos data
                 $all_demo = Yatri_Tools_Demos::get_demos_data();
-                $demo = isset($all_demo[$demo_type]) ? $all_demo[$demo_type] : array();
+                $demo = isset($all_demo[$demo_type])?$all_demo[$demo_type]: array();
 
                 // Elementor width setting
                 $elementor_width = isset($demo['elementor_width']) ? $demo['elementor_width'] : '';
