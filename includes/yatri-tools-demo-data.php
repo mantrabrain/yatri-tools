@@ -7,7 +7,7 @@ function yatri_tools_demo_data_config()
 
     return array(
         'main' => array(
-            'categories' => array('Elementor'),
+            'categories' => array('Elementor', 'Business', 'WooCommerce'),
             'xml_file' => $demo_data_root_path . 'main/content.xml',
             'theme_settings' => $demo_data_root_path . 'main/customizer.dat',
             'widgets_file' => $demo_data_root_path . 'main/widgets.wie',

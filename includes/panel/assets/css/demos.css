@@ -60,7 +60,7 @@
 
 .yatri-tools-demo-wrap .yatri-tools-navigation li.active a,
 .yatri-tools-demo-wrap .yatri-tools-navigation li.active a:hover {
-    border-bottom: 4px solid #666
+    border-bottom: 4px solid #4285f4
 }
 
 .yatri-tools-demo-wrap .yatri-tools-navigation li a {
@@ -77,7 +77,7 @@
 
 .yatri-tools-demo-wrap .yatri-tools-navigation li a:hover {
     cursor: pointer;
-    color: #00a0d2;
+    color: #0b51c5;
     border-bottom: 4px solid #fff
 }
 
@@ -652,7 +652,8 @@
     }
 
     .yatri-tools-demo-wrap .yatri-tools-navigation li a {
-        padding: 15px
+        padding: 15px;
+        font-weight: 500;
     }
 
     .yatri-tools-demo-wrap .yatri-tools-search-input {
@@ -669,4 +670,24 @@
         float: none;
         width: 100%
     }
+}
+
+.yatri-tools-demo-success-feedback {
+    margin-bottom: 20px;
+}
+
+.yatri-tools-demo-success-feedback textarea {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 65px;
+    border-radius: 0;
+    width: 100%;
+    border: 1px solid #aaa;
+    text-align: center;
+
+}
+
+.yatri-tools-demo-success-feedback p {
+    font-size: 11px;
+    margin-bottom: 10px;
 }

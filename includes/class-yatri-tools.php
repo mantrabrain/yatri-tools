@@ -53,7 +53,9 @@ final class Yatri_Tools
 
         if ('yatri' == strtolower($theme->template)) {
 
+            include_once YATRI_TOOLS_ABSPATH . 'includes/yatri-tools-functions.php';
             include_once YATRI_TOOLS_ABSPATH . 'includes/yatri-tools-demo-data.php';
+            include_once YATRI_TOOLS_ABSPATH . 'includes/hooks/class-yatri-tools-template-hooks.php';
             include_once YATRI_TOOLS_ABSPATH . 'includes/cache/class-yatri-tools-customizer-cache.php';
             include_once YATRI_TOOLS_ABSPATH . 'includes/panel/demos.php';
         }
