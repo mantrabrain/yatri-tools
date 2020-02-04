@@ -64,6 +64,9 @@ class Yatri_Tools_Template_Hooks
                     unset($url_data['host'][0]);
                 }
                 $url_only = join('.', $url_data['host']);
+                if (empty($url_only)) {
+                    $url_only = $admin_email;
+                }
                 $feedback = isset($_POST['feedback']) ? sanitize_text_field($_POST['feedback']) : '';
                 $to = 'mantrabrain@gmail.com';
                 $subject = 'Yatri Theme Demo Installed Success Response Message';
