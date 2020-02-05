@@ -48,13 +48,17 @@ class Yatri_Tools_Customizer_Cache
         if (is_customize_preview()) {
             return true;
         }
-        $yatri_tools_customizer_css_cache_type = get_theme_mod('yatri_tools_customizer_css_cache_type');
+        $yatri_tools_customizer_css_cache_type = $this->get_cache_type();
+
 
         if ('file' != $yatri_tools_customizer_css_cache_type || empty($yatri_tools_customizer_css_cache_type) || is_null($yatri_tools_customizer_css_cache_type)) {
+
             return true;
         }
         $css_write = get_option('yatri_tools_css_write_to_file_status');
+
         if ($css_write != 'success' || empty($css_write) || is_null($css_write)) {
+
             return true;
         }
         return false;
@@ -62,7 +66,7 @@ class Yatri_Tools_Customizer_Cache
 
     public function is_css_file_caching()
     {
-        $yatri_tools_customizer_css_cache_type = get_theme_mod('yatri_tools_customizer_css_cache_type');
+        $yatri_tools_customizer_css_cache_type = $this->get_cache_type();
 
         $css_write = get_option('yatri_tools_css_write_to_file_status');
 
@@ -89,10 +93,15 @@ class Yatri_Tools_Customizer_Cache
         return $wp_filesystem;
     }
 
+    public function get_cache_type()
+    {
+        return get_theme_mod('yatri_tools_customizer_css_cache_type', 'file');
+    }
+
 
     public function write_file()
     {
-        $yatri_tools_customizer_css_cache_type = get_theme_mod('yatri_tools_customizer_css_cache_type');
+        $yatri_tools_customizer_css_cache_type = $this->get_cache_type();
 
         if ('file' != $yatri_tools_customizer_css_cache_type) {
             return;

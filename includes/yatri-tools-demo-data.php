@@ -7,11 +7,32 @@ function yatri_tools_demo_data_config()
 
     return array(
         'main' => array(
-            'categories' => array('Elementor', 'Business', 'WooCommerce'),
+            'categories' => array('Elementor', 'Corporate & Business', 'WooCommerce'),
             'xml_file' => $demo_data_root_path . 'main/content.xml',
             'theme_settings' => $demo_data_root_path . 'main/customizer.dat',
             'widgets_file' => $demo_data_root_path . 'main/widgets.wie',
             'screenshot' => $demo_data_root_path . 'main/screenshot.png',
+            'home_title' => 'Home',
+            'blog_title' => 'Blog',
+            'posts_to_show' => '5',
+            'elementor_width' => '1140',
+            'required_plugins' => array(
+                'free' => array(
+                    array(
+                        'slug' => 'elementor',
+                        'init' => 'elementor/elementor.php',
+                        'name' => 'Elementor',
+                    ),
+
+                )
+            ),
+        ),
+        'agency' => array(
+            'categories' => array('Elementor', 'Corporate & Business', 'WooCommerce'),
+            'xml_file' => $demo_data_root_path . 'agency/content.xml',
+            'theme_settings' => $demo_data_root_path . 'agency/customizer.dat',
+            'widgets_file' => $demo_data_root_path . 'agency/widgets.wie',
+            'screenshot' => $demo_data_root_path . 'agency/screenshot.png',
             'home_title' => 'Home',
             'blog_title' => 'Blog',
             'posts_to_show' => '5',
