@@ -500,6 +500,7 @@
                 return;
             }
 
+            $button.closest('.yatri-tools-plugin').find('h2').find('.plugin-activated-icon').remove();
             $button.addClass('updating-message button-primary').html(yatriToolsDemos.button_activating);
 
             $.ajax({
@@ -516,7 +517,8 @@
                     $button.removeClass('button-primary install-now activate-now updating-message')
                         .attr('disabled', 'disabled')
                         .addClass('disabled')
-                        .text(yatriToolsDemos.button_active);
+                        .text(yatriToolsDemos.button_activated);
+                    $button.closest('.yatri-tools-plugin').find('h2').prepend('<span class="plugin-activated-icon dashicons dashicons-yes-alt"></span>')
 
                 }
 
@@ -528,6 +530,7 @@
             e.preventDefault();
 
             var $message = $('.yatri-tools-plugin-' + response.slug).find('.button');
+            $message.closest('.yatri-tools-plugin').find('h2').find('.plugin-activated-icon').remove();
 
             // Transform the 'Install' button into an 'Activate' button.
             var $init = $message.data('init');
@@ -553,7 +556,8 @@
                         $message.removeClass('button-primary install-now activate-now updating-message')
                             .attr('disabled', 'disabled')
                             .addClass('disabled')
-                            .text(yatriToolsDemos.button_active);
+                            .text(yatriToolsDemos.button_activated);
+                        $message.closest('.yatri-tools-plugin').find('h2').prepend('<span class="plugin-activated-icon dashicons dashicons-yes-alt"></span>')
 
                     } else {
                         $message.removeClass('updating-message');

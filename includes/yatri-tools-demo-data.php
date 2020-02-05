@@ -44,6 +44,11 @@ function yatri_tools_demo_data_config()
                         'init' => 'elementor/elementor.php',
                         'name' => 'Elementor',
                     ),
+                    array(
+                        'slug' => 'contact-form-7',
+                        'init' => 'contact-form-7/wp-contact-form-7.php',
+                        'name' => 'Contact Form',
+                    ),
 
                 )
             ),

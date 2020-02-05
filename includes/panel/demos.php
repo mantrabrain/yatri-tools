@@ -113,6 +113,7 @@ if (!class_exists('Yatri_Tools_Demos')) {
                 'content_importing_error' => esc_html__('There was a problem during the importing process resulting in the following error from your server:', 'yatri-tools-toolkit'),
                 'button_activating' => esc_html__('Activating', 'yatri-tools-toolkit') . '&hellip;',
                 'button_active' => esc_html__('Active', 'yatri-tools-toolkit'),
+                'button_activated' => esc_html__('Activated', 'yatri-tools-toolkit'),
             ));
 
         }
@@ -256,7 +257,7 @@ if (!class_exists('Yatri_Tools_Demos')) {
 
             <div id="yatri-tools-demo-plugins">
 
-                <h2 class="title"><?php echo sprintf(esc_html__('Import the %1$s demo', 'yatri-tools-toolkit'), esc_attr($demo)); ?></h2>
+                <h2 class="title"><?php echo sprintf(esc_html__('Import the %1$s %2$s %3$s demo', 'yatri-tools-toolkit'), '<strong style="color:#4285f4;font-weight:bold;">', esc_attr($demo), '</strong>'); ?></h2>
 
                 <div class="yatri-tools-popup-text">
 
@@ -270,7 +271,7 @@ if (!class_exists('Yatri_Tools_Demos')) {
                     <div class="yatri-tools-required-plugins-wrap">
                         <h3><?php esc_html_e('Recommended Plugins', 'yatri-tools-toolkit'); ?></h3>
                         <p><?php esc_html_e('For your site to look exactly like this demo, the plugins below need to be activated.', 'yatri-tools-toolkit'); ?></p>
-                        <div class="yatri-tools-required-plugins oe-plugin-installer">
+                        <div class="yatri-tools-required-plugins yatri-tools-plugin-installer">
                             <?php
                             self::required_plugins($free, 'free');
                             self::required_plugins($premium, 'premium'); ?>
@@ -370,6 +371,8 @@ if (!class_exists('Yatri_Tools_Demos')) {
 
                 if (!is_wp_error($api)) { // confirm error free
 
+                    $activated_icon = '';
+
                     // Installed but Inactive.
                     if (file_exists(WP_PLUGIN_DIR . '/' . $plugin['init']) && is_plugin_inactive($plugin['init'])) {
 
@@ -386,11 +389,13 @@ if (!class_exists('Yatri_Tools_Demos')) {
                     } else {
                         $button_classes = 'button disabled';
                         $button_text = esc_html__('Activated', 'yatri-tools-toolkit');
+                        $activated_icon = '<span class="plugin-activated-icon dashicons dashicons-yes-alt"></span>';
                     } ?>
 
                     <div class="yatri-tools-plugin yatri-tools-clr yatri-tools-plugin-<?php echo $api['slug']; ?>"
                          data-slug="<?php echo $api['slug']; ?>" data-init="<?php echo $api['init']; ?>">
-                        <h2><?php echo $api['name']; ?></h2>
+                        <h2><?php echo $activated_icon;
+                            echo $api['name']; ?></h2>
 
                         <?php
                         // If premium plugins and not installed
