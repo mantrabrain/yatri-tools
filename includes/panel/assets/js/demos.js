@@ -52,6 +52,7 @@
 
             $(document).on('click', '.install-now', this.installNow);
             $(document).on('click', 'button[name="yatri_tools_demo_success_send"]', this.sendUserFeedback);
+            $(document).on('click', 'button[name="yatri_tools_demo_failed_send"]', this.sendUserFailedFeedback);
             $(document).on('click', '.activate-now', this.activatePlugins);
             $(document).on('wp-plugin-install-success', this.installSuccess);
             $(document).on('wp-plugin-installing', this.pluginInstalling);
@@ -72,6 +73,26 @@
                 type: 'post',
                 data: formData,
                 complete: function (data) {
+                    form.remove();
+                }
+            });
+
+        },
+        sendUserFailedFeedback: function (event) {
+            event.preventDefault();
+            var _that = $(this);
+            var form = $(this).closest('form');
+            _that.addClass('updating-message');
+            var formData = form.serializeArray();
+            formData.push({name: this.name, value: this.value});
+            formData.push({name: 'is_ajax', value: 'yes'});
+
+            $.ajax({
+                url: yatriToolsDemos.ajaxurl,
+                type: 'post',
+                data: formData,
+                complete: function (data) {
+                    form.before($('<p style="margin-bottom: 50px; display: block;text-align: center;height: 50px;">Thank you for sending us your message. We will get back to you soon.</p>'));
                     form.remove();
                 }
             });
@@ -351,6 +372,9 @@
                             .addClass('yatri-tools-importing-failed')
                             .removeClass('yatri-tools-importing')
                             .text(yatriToolsDemos.content_importing_error + ' ' + data.status);
+                        $('.yatri-tools-demo-failed-feedback-form').find('.error_message').val(yatriToolsDemos.content_importing_error + ' ' + data.status);
+                        $('.yatri-tools-demo-failed-feedback-form').show();
+
                     } else if (data.responseText.indexOf('successful import') !== -1) {
                         $('.yatri-tools-importing').addClass('yatri-tools-imported').removeClass('yatri-tools-importing');
                     } else {
@@ -372,6 +396,9 @@
                             .addClass('yatri-tools-importing-failed')
                             .removeClass('yatri-tools-importing')
                             .text(errorMessage);
+                        $('.yatri-tools-demo-failed-feedback-form').find('.error_message').val(errorMessage);
+                        $('.yatri-tools-demo-failed-feedback-form').show();
+
 
                         that.allowPopupClosing = true;
                         $('.yatri-tools-demo-popup-close').fadeIn();
@@ -401,6 +428,10 @@
                     .addClass('yatri-tools-importing-failed')
                     .removeClass('yatri-tools-importing')
                     .text(yatriToolsDemos.content_importing_error);
+                $('.yatri-tools-demo-failed-feedback-form').find('.error_message').val(yatriToolsDemos.content_importing_error);
+                $('.yatri-tools-demo-failed-feedback-form').show();
+
+
             }, 15 * 60 * 1000);
 
         },

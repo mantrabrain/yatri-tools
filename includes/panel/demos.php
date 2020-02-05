@@ -332,6 +332,9 @@ if (!class_exists('Yatri_Tools_Demos')) {
             <div class="yatri-tools-loader">
                 <h2 class="title"><?php esc_html_e('The import process could take some time, please be patient', 'yatri-tools-toolkit'); ?></h2>
                 <div class="yatri-tools-import-status yatri-tools-popup-text"></div>
+                <?php
+                do_action('yatri_tools_after_demo_import_failed_message', $demo);
+                ?>
             </div>
 
             <div class="yatri-tools-last">
