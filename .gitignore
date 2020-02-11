@@ -13,7 +13,6 @@ project.properties
 
 # Grunt
 /node_modules/
-
 # Sass
 .sass-cache/
 
