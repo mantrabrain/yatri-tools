@@ -8,6 +8,8 @@ project.properties
 .idea
 /svn-repository/
 /demo-data/
+/includes/elementor/assets/admin/js/library/node_modules/
+/includes/elementor/elementor-demo-data/
 
 # Grunt
 /node_modules/

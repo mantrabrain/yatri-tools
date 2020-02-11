@@ -60,6 +60,11 @@ final class Yatri_Tools
             include_once YATRI_TOOLS_ABSPATH . 'includes/panel/demos.php';
         }
 
+        // Elementor Compatibility requires PHP 5.4 for namespaces.
+        if (version_compare(PHP_VERSION, '5.4', '>=')) {
+            require_once YATRI_TOOLS_ABSPATH . 'includes/elementor/class-yatri-tools-elementor.php';
+        }
+
     }
 
 

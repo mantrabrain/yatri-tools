@@ -99,6 +99,13 @@ if (!class_exists('Yatri_Tools_Demos')) {
         public static function scripts()
         {
 
+            $screen = get_current_screen();
+
+            $screen_id = isset($screen->id) ? $screen->id : '';
+
+            if ($screen_id !== 'appearance_page_yatri-tools-install-demos') {
+                return;
+            }
 
             // CSS
             wp_enqueue_style('yatri-tools-demos-style', plugins_url('/assets/css/demos.css', __FILE__));
@@ -200,8 +207,9 @@ if (!class_exists('Yatri_Tools_Demos')) {
         {
             global $pagenow;
 
+            $page = isset($_GET['page']) ? $_GET['page'] : '';
             // Display on the demos pages
-            if (('themes.php' == $pagenow && 'yatri-tools-install-demos' == $_GET['page'])) { ?>
+            if (('themes.php' == $pagenow && 'yatri-tools-install-demos' == $page)) { ?>
 
                 <div id="yatri-tools-demo-popup-wrap">
                     <div class="yatri-tools-demo-popup-container">
