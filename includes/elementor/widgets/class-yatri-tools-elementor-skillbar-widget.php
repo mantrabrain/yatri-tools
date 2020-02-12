@@ -44,7 +44,7 @@ class Yatri_Tools_Elementor_Skillbar_Widget extends Widget_Base {
 		$this->start_controls_section(
 			'section_alert',
 			[
-				'label' 		=> __( 'Skillbar', 'yatri-tools' ),
+				'label' 		=> __( 'Yatri Skillbar', 'yatri-tools' ),
 			]
 		);
 
