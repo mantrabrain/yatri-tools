@@ -30,7 +30,7 @@ class Yatri_Tools_Elementor_Progressbar_widget extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'yatri-tools-elementor' ];
+		return [ YATRI_TOOLS_ELEMENTOR_CATEGORY ];
 	}
 
 	public function get_style_depends() {

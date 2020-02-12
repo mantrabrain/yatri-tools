@@ -38,7 +38,7 @@ class Yatri_Tools_Elementor_Hooks
         wp_register_style('yatri-tools-elementor-slicktheme', YATRI_TOOLS_PLUGIN_URI . 'includes/elementor/assets/css/slick-theme.min.css');
         wp_register_style('yte-testimonial', YATRI_TOOLS_PLUGIN_URI . 'includes/elementor/assets/css/testimonial.css');
         wp_register_style('yte-team', YATRI_TOOLS_PLUGIN_URI . 'includes/elementor/assets/css/team.css');
-        wp_register_style('yte-progressbar', YATRI_TOOLS_PLUGIN_URI . 'includes/elementor/assets/css/progressbar.css');
+        wp_register_style('yte-progressbar', YATRI_TOOLS_PLUGIN_URI . 'includes/elementor/assets/css/skillbar.css');
         wp_register_style('yte-counter', YATRI_TOOLS_PLUGIN_URI . 'includes/elementor/assets/css/counter.css');
 
         wp_register_style('yte-twentytwenty', YATRI_TOOLS_PLUGIN_URI . 'includes/elementor/assets/css/twentytwenty.css');
@@ -69,6 +69,8 @@ class Yatri_Tools_Elementor_Hooks
         wp_register_script('yte-testimonial', YATRI_TOOLS_PLUGIN_URI . 'includes/elementor/assets/js/testimonial.js', ['jquery'], false, true);
 
         wp_register_script('yte-counter', YATRI_TOOLS_PLUGIN_URI . 'includes/elementor/assets/js/counter.js', ['jquery'], false, true);
+        wp_register_script('yte-appear', YATRI_TOOLS_PLUGIN_URI . 'includes/elementor/assets/js/appear.js', ['jquery'], false, true);
+        wp_register_script('yte-skillbar', YATRI_TOOLS_PLUGIN_URI . 'includes/elementor/assets/js/skillbar.js', ['jquery', 'yte-appear'], false, true);
 
     }
 
@@ -76,6 +78,8 @@ class Yatri_Tools_Elementor_Hooks
     public function yte_enqueue_scripts()
     {
         wp_enqueue_script('yte-testimonial');
+        wp_enqueue_script('yte-appear');
+        wp_enqueue_script('yte-skillbar');
         wp_enqueue_script('yatri-tools-elementor-slickjs');
         wp_enqueue_script('yte-eventmovejs');
         wp_enqueue_script('yte-twentytwentyjs');

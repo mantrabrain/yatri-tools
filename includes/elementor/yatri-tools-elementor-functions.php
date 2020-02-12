@@ -16,11 +16,11 @@ function yatri_tools_elementor_get_all_widgets()
             'enable' => true,
             'class' => 'Yatri_Tools_Elementor_Team_Widget',
         ],
-        'progressbar' => [
-            'title' => 'Yatri Progress Bar',
+        'skillbar' => [
+            'title' => 'Yatri Skillbar',
             'description' => '',
             'enable' => true,
-            'class' => 'Yatri_Tools_Elementor_Progressbar_Widget',
+            'class' => 'Yatri_Tools_Elementor_Skillbar_Widget',
 
         ],
         'counter' => [

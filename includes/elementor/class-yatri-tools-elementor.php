@@ -23,6 +23,10 @@ final class Yatri_Tools_Elementor
     public function setup()
     {
 
+        if (!defined('YATRI_TOOLS_ELEMENTOR_CATEGORY')) {
+            define('YATRI_TOOLS_ELEMENTOR_CATEGORY', 'yatri-tools-elementor-elements');
+        }
+
         // Register Custom Category
         add_action('elementor/elements/categories_registered', [$this, 'add_elementor_widget_categories']);
 
@@ -107,12 +111,20 @@ final class Yatri_Tools_Elementor
     function add_elementor_widget_categories($elements_manager)
     {
 
+        // Theme branding
+        if (function_exists('yatri_theme_branding')) {
+
+            $brand = yatri_theme_branding();
+        } else {
+
+            $brand = 'Yatri';
+        }
         $elements_manager->add_category(
-            'yatri-tools-elementor',
+            YATRI_TOOLS_ELEMENTOR_CATEGORY,
             [
-                'title' => __('Yatri Widgets', 'yatri-tools'),
+                'title' => $brand . ' ' . __('Widgets', 'yatri-tools'),
                 'icon' => 'fas fa-ghost',
-            ]
+            ], 1
         );
     }
 
