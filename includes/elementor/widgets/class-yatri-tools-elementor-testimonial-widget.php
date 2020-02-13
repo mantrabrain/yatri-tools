@@ -520,6 +520,18 @@ class Yatri_Tools_Elementor_Testimonial_Widget extends Widget_Base
             ]
         );
 
+        $this->add_control(
+            'testimonial_primary_color',
+            [
+                'label' => __('Primary Color', 'yatri-tools'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .yatri-tools-elementor-testimonial .yte-testimonial-slide .yte-person-testimonial blockquote:before' => 'color: {{VALUES}}',
+                    '{{WRAPPER}} .yatri-tools-elementor-testimonial .yte-testimonial-slide .yte-person-testimonial blockquote' => 'border-color: {{VALUES}}'
+                ]
+            ]
+        );
+
         $this->end_controls_section();
 
         // Author Styling
