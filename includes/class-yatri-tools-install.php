@@ -60,7 +60,10 @@ final class Yatri_Tools_Install
             array(
                 'base' => YATRI_TOOLS_UPLOAD_DIR,
                 'file' => '.htaccess',
-                'content' => 'deny from all',
+                'content' => '<FilesMatch ".*\.(css|js)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>',
             ),
             array(
                 'base' => YATRI_TOOLS_UPLOAD_DIR,
@@ -78,7 +81,10 @@ final class Yatri_Tools_Install
             $files[] = array(
                 'base' => $upload_dir['basedir'] . '/yatri-tools-upload',
                 'file' => '.htaccess',
-                'content' => '',
+                'content' => '<FilesMatch ".*\.(css|js)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>',
             );
         }
 
