@@ -20,9 +20,6 @@ class Yatri_Tools_Customizer_Cache
         add_action('customize_save_after', array($this, 'write_file'), 20);
         add_action('yatri_theme_dynamic_css_enable', array($this, 'inline_dynamic_css'));
         add_action('yatri_scripts_styles', array($this, 'enqueue_dynamic_css'));
-        if (is_customize_preview()) {
-            add_action('customize_save_after', 'yatri_init_customizer_options', 10);
-        }
 
     }
 
@@ -113,6 +110,7 @@ class Yatri_Tools_Customizer_Cache
         $created = get_option('yatri_tools_upload_dir_created');
         if ('yes' == $created) {
             $filesystem = $this->get_filesystem();
+            yatri_init_customizer_options();
             $css = yatri_get_all_dynamic_css();
 
             $write_file = (bool)$filesystem->put_contents(YATRI_TOOLS_DYNAMIC_CSS_PATH, $css);
