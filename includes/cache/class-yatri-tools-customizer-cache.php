@@ -34,6 +34,7 @@ class Yatri_Tools_Customizer_Cache
                 'handler' => 'yatri-tools-dynamic-css',
                 'style' => YATRI_TOOLS_DYNAMIC_CSS_URI,
                 'absolute' => true,
+                'version'=> rand ( 10000 , 9999999 )
             );
         }
         return $script;
