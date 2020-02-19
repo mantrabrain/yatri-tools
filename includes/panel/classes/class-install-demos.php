@@ -20,7 +20,7 @@ class Yatri_Tools_Install_Demos
      */
     public function __construct()
     {
-        add_action('admin_menu', array($this, 'add_page'), 10);
+        add_action('admin_menu', array($this, 'add_page'), 11);
     }
 
     /**
@@ -33,13 +33,15 @@ class Yatri_Tools_Install_Demos
 
         $title = esc_html__('Install Demos', 'yatri-tools-toolkit');
 
-        add_theme_page(
+        add_submenu_page(
+            'yatri-panel',
             'Install Demos',
             'Install Demos',
             'manage_options',
             'yatri-tools-install-demos',
             array($this, 'create_admin_page')
         );
+
     }
 
     /**

@@ -103,7 +103,7 @@ if (!class_exists('Yatri_Tools_Demos')) {
 
             $screen_id = isset($screen->id) ? $screen->id : '';
 
-            if ($screen_id !== 'appearance_page_yatri-tools-install-demos') {
+            if ($screen_id !== 'yatri-options_page_yatri-tools-install-demos') {
                 return;
             }
 
@@ -209,7 +209,7 @@ if (!class_exists('Yatri_Tools_Demos')) {
 
             $page = isset($_GET['page']) ? $_GET['page'] : '';
             // Display on the demos pages
-            if (('themes.php' == $pagenow && 'yatri-tools-install-demos' == $page)) { ?>
+            if (('admin.php' == $pagenow && 'yatri-tools-install-demos' == $page)) { ?>
 
                 <div id="yatri-tools-demo-popup-wrap">
                     <div class="yatri-tools-demo-popup-container">

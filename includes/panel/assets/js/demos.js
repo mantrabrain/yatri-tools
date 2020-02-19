@@ -226,7 +226,6 @@
         // Run popup.
         runPopup: function (data) {
             var that = this
-
             var innerWidth = $('html').innerWidth();
             $('html').css('overflow', 'hidden');
             var hiddenInnerWidth = $('html').innerWidth();

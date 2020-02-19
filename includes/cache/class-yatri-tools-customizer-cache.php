@@ -34,7 +34,7 @@ class Yatri_Tools_Customizer_Cache
                 'handler' => 'yatri-tools-dynamic-css',
                 'style' => YATRI_TOOLS_DYNAMIC_CSS_URI,
                 'absolute' => true,
-                'version'=> rand ( 10000 , 9999999 )
+                'version' => rand(10000, 9999999)
             );
         }
         return $script;
@@ -123,30 +123,34 @@ class Yatri_Tools_Customizer_Cache
         }
     }
 
-    public
-    function add_panel($wp_customize)
+    public function add_panel($wp_customize)
     {
-        $wp_customize->add_panel(new Mantrabrain_Theme_Customizer_Panel(
-            $wp_customize, 'yatri_tools_theme_cache_panel', array(
-            'priority' => 30,
-            'title' => esc_html__('Theme Cache', 'yatri'),
-            'capabitity' => 'edit_theme_options',
-        )));
+        if (class_exists('Yatri_Core')) {
+
+            $wp_customize->add_panel(new Mantrabrain_Theme_Customizer_Panel(
+                $wp_customize, 'yatri_tools_theme_cache_panel', array(
+                'priority' => 30,
+                'title' => esc_html__('Theme Cache', 'yatri'),
+                'capabitity' => 'edit_theme_options',
+            )));
+        }
     }
 
 
-    public
-    function add_section($wp_customize)
+    public function add_section($wp_customize)
     {
-        $wp_customize->add_section(
-            'yatri_tools_customizer_cache_section',
-            array(
-                'title' => __('Customizer Cache', 'yatri'),
-                'priority' => 5,
-                'panel' => 'yatri_tools_theme_cache_panel',
-            )
-        );
-        include_once "sections/customizer-cache.php";
+        if (class_exists('Yatri_Core')) {
+
+            $wp_customize->add_section(
+                'yatri_tools_customizer_cache_section',
+                array(
+                    'title' => __('Customizer Cache', 'yatri'),
+                    'priority' => 5,
+                    'panel' => 'yatri_tools_theme_cache_panel',
+                )
+            );
+            include_once "sections/customizer-cache.php";
+        }
     }
 
 }

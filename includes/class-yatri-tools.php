@@ -21,6 +21,8 @@ final class Yatri_Tools
         $this->includes();
         $this->init_hooks();
 
+        do_action('yatri_tools_loaded');
+
 
     }
 
@@ -45,6 +47,8 @@ final class Yatri_Tools
 
     }
 
+
+
     public function includes()
     {
         include_once YATRI_TOOLS_ABSPATH . 'includes/class-yatri-tools-install.php';
@@ -63,6 +67,9 @@ final class Yatri_Tools
         // Elementor Compatibility requires PHP 5.4 for namespaces.
         if (version_compare(PHP_VERSION, '5.4', '>=')) {
             require_once YATRI_TOOLS_ABSPATH . 'includes/elementor/class-yatri-tools-elementor.php';
+        }
+        if (is_admin()) {
+            require_once YATRI_TOOLS_ABSPATH . 'includes/admin/class-yatri-tools-admin.php';
         }
 
     }
