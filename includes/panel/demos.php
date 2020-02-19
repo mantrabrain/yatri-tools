@@ -668,14 +668,16 @@ if (!class_exists('Yatri_Tools_Demos')) {
 
                 if ($menus) {
 
-                    foreach ($menus as $menu) {
+                    foreach ( $menus as $menu ) {
 
-                        if ($menu->name == 'Main Menu') {
-                            $locations['menu-1'] = $menu->term_id;
-                        } else if ($menu->name == 'Top Menu') {
-                            $locations['menu-2'] = $menu->term_id;
-                        } else if ($menu->name == 'Footer Menu') {
-                            $locations['menu-3'] = $menu->term_id;
+                        if ( $menu->name == 'Primary Menu' ) {
+                            $locations['primary'] = $menu->term_id;
+                        } else if ( $menu->name == 'Top Header Menu' ) {
+                            $locations['top_header_menu'] = $menu->term_id;
+                        } else if ( $menu->name == 'Footer Menu' ) {
+                            $locations['bottom_footer_menu'] = $menu->term_id;
+                        } else if ( $menu->name == 'Offcanvas Menu' ) {
+                            $locations['offcanvas_menu'] = $menu->term_id;
                         }
 
                     }

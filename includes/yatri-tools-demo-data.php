@@ -1,4 +1,5 @@
 <?php
+
 add_filter('yatri_tools_demos_data', 'yatri_tools_demo_data_config');
 
 function yatri_tools_demo_data_config()
