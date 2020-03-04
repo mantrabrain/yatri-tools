@@ -153,7 +153,10 @@ module.exports = function (grunt) {
                 options: {
                     potFilename: 'yatri-tools.pot',
                     exclude: [
-                        'vendor/.*'
+                        'vendor/.*',
+                        'demo-data/.*',
+                        'elementor-demo-data/.*',
+                        'svn-repository/.*'
                     ],
 
                 }
@@ -255,6 +258,7 @@ module.exports = function (grunt) {
                     '!phpcs.ruleset.xml',
                     '!demo-content/**',
                     '!demo-data/**',
+                    '!svn-repository/**',
                     '!elementor-demo-data/**',
                     '!includes/elementor/assets/admin/js/library/**',
                     '!mantrabrain-theme/.git',

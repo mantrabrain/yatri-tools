@@ -3,7 +3,7 @@ Contributors: Mantrabrain
 Tags: demo import, tools, elementor template library
 Requires at least: 4.7
 Tested up to: 5.3.2
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -19,6 +19,12 @@ Extend Yatri theme feature with demo importer functionality & add Elementor widg
 
 
 == Changelog ==
+
+= 1.0.6 | 2020/03/05 =
+* Update demos config & minor issue fixed
+
+= 1.0.5 | 2020/02/12 =
+* Fix - Minor issue fixed
 
 = 1.0.4 | 2020/02/12 =
 * Update elementor block
