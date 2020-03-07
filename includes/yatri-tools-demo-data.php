@@ -213,6 +213,19 @@ function yatri_tools_demo_data_config()
                         'name' => 'WooCommerce',
                     ),
 
+                ),
+                'premium' => array(
+                    array(
+                        'slug' => 'yatri-typography-addon',
+                        'init' => 'yatri-typography-addon/yatri-typography-addon.php',
+                        'name' => 'Yatri Typography Addon',
+                    ),
+                    array(
+                        'slug' => 'yatri-agency-elementor-addon',
+                        'init' => 'yatri-agency-elementor-addon/yatri-agency-elementor-addon.php',
+                        'name' => 'Yatri Agency Elementor Addon',
+                    ),
+
                 )
             ),
         ),
