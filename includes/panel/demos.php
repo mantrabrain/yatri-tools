@@ -443,7 +443,7 @@ if (!class_exists('Yatri_Tools_Demos')) {
                 );
             }
 
-            $plugin_init = (isset($_POST['init'])) ? esc_attr($_POST['init']) : '';
+            $plugin_init = (isset($_POST['init'])) ? sanitize_text_field($_POST['init']) : '';
             $activate = activate_plugin($plugin_init, '', false, true);
 
             if (is_wp_error($activate)) {
@@ -668,15 +668,15 @@ if (!class_exists('Yatri_Tools_Demos')) {
 
                 if ($menus) {
 
-                    foreach ( $menus as $menu ) {
+                    foreach ($menus as $menu) {
 
-                        if ( $menu->name == 'Primary Menu' ) {
+                        if ($menu->name == 'Primary Menu') {
                             $locations['primary'] = $menu->term_id;
-                        } else if ( $menu->name == 'Top Header Menu' ) {
+                        } else if ($menu->name == 'Top Header Menu') {
                             $locations['top_header_menu'] = $menu->term_id;
-                        } else if ( $menu->name == 'Footer Menu' ) {
+                        } else if ($menu->name == 'Footer Menu') {
                             $locations['bottom_footer_menu'] = $menu->term_id;
-                        } else if ( $menu->name == 'Offcanvas Menu' ) {
+                        } else if ($menu->name == 'Offcanvas Menu') {
                             $locations['offcanvas_menu'] = $menu->term_id;
                         }
 
