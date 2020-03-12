@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Plugin Name:       Yatri Tools
  * Plugin URI:        https://wordpress.org/plugins/yatri-tools
