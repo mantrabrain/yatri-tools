@@ -3,7 +3,7 @@ Contributors: Mantrabrain
 Tags: demo import, tools, elementor template library
 Requires at least: 4.7
 Tested up to: 5.3.2
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
