@@ -18,7 +18,7 @@ Extend Yatri theme feature with demo importer functionality & add Elementor widg
 2. Activate the Mantra Audience plugin through the 'Plugins' menu in WordPress.
 
 = How to import demo data on Yatri Free WordPress Theme =
-[https://www.youtube.com/watch?v=cDOynyUt8TM]
+[youtube https://www.youtube.com/watch?v=cDOynyUt8TM]
 
 = Yatri Elementor Block & Template Library =
 [youtube https://www.youtube.com/watch?v=-yhkxdtV5nM]
