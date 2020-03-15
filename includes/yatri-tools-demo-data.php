@@ -253,3 +253,27 @@ function yatri_tools_demo_data_config()
 
     );
 }
+
+
+function yatri_tools_all_header_templates()
+{
+    $template_url = 'https://raw.githubusercontent.com/mantrabrain/yatri-prebuilt-header-templates/master/all-header-template-list.json';
+
+    $response = wp_remote_get($template_url);
+
+    $response_data_string = (wp_remote_retrieve_body($response));
+
+    try {
+        $response_data = json_decode($response_data_string, true);
+
+        if (count($response_data) > 0) {
+
+            return $response_data;
+        }
+    } catch (Exception $e) {
+        return array();
+    }
+    return array();
+
+
+}
