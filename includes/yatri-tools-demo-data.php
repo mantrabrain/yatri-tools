@@ -266,6 +266,11 @@ function yatri_tools_all_header_templates()
     try {
         $response_data = json_decode($response_data_string, true);
 
+        if(!is_array($response_data)){
+            return array();
+        }
+
+
         if (count($response_data) > 0) {
 
             return $response_data;
