@@ -31,7 +31,7 @@
         },
         importThisTemplate: function (node) {
 
-            var confirm = window.confirm('Are you sure want to import this header template');
+            var confirm = window.confirm('Are you sure want to import this header template? This will override all your current header settings.');
             if (!confirm) {
                 return;
             }

@@ -2,7 +2,7 @@
 
     position: absolute;
     left: 0;
-    right:0;
+    right: 0;
     border: 1px solid #dddd;
     height: 400px;
     background: #edfdff;
@@ -46,13 +46,15 @@
 .yatri-prebuilt-template-wrap .button {
     position: absolute;
     right: 8px;
-    border-radius: 0;
+    border-radius: 20px;
     z-index: 9999;
     display: none;
     padding-left: 30px;
     padding-right: 30px;
     text-transform: uppercase;
     background: #fcff47;
+    border-width: 2px;
+    font-weight: 500;
 }
 
 .yatri-prebuilt-template-wrap label:hover:after {
@@ -74,4 +76,5 @@
 
 .yatri-prebuilt-template-wrap label:hover .button {
     display: block;
+    background: #fcff47;
 }

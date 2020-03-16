@@ -270,7 +270,6 @@ function yatri_tools_all_header_templates()
             return array();
         }
 
-
         if (count($response_data) > 0) {
 
             return $response_data;
