@@ -7,15 +7,15 @@ Stable tag: 1.0.10
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Extend Yatri theme feature with demo importer functionality, prebuild header templates & add Elementor widgets, blocks, pages template library
+Extend Yatri theme feature with demo importer functionality, prebuilt header templates & add Elementor widgets, blocks, pages template library
 
 == Description ==
-Extend Yatri theme feature with demo importer functionality, prebuild header templates & add Elementor widgets, blocks, pages template library
+Extend Yatri theme feature with demo importer functionality, prebuilt header templates & add Elementor widgets, blocks, pages template library
 
 = How to import demo data on Yatri Free WordPress Theme =
 [youtube https://www.youtube.com/watch?v=cDOynyUt8TM]
 
-= Yatri Prebuild Header Templates =
+= Yatri Prebuilt Header Templates =
 [youtube https://www.youtube.com/watch?v=QoVLYOdSkf4]
 
 = Yatri Elementor Blocks & Templates Library =
