@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Yatri Tools
  * Plugin URI:        https://wordpress.org/plugins/yatri-tools
- * Description:       Extend Yatri theme feature with demo importer functionality & add Elementor widgets, blocks, pages template library
+ * Description:       Extend Yatri theme feature with demo importer functionality, prebuild header templates & add Elementor widgets, blocks, pages template library
  * Version:           1.0.10
  * Author:            Mantrabrain
  * Author URI:        https://mantrabrain.com/
