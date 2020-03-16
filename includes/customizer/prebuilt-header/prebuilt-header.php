@@ -11,7 +11,7 @@ $wp_customize->add_section(new Mantrabrain_Theme_Customizer_Section(
 // Header Templates
 $wp_customize->add_setting(yatri_get_customizer_id('prebuilt_header_templates'),
     array(
-        'default' => $default['prebuilt_header_templates'],
+        'default' => '',
         'sanitize_callback' => 'sanitize_text_field',
     )
 );
