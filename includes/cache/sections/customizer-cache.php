@@ -2,7 +2,7 @@
 
 $wp_customize->add_setting('yatri_tools_customizer_css_cache_type',
     array(
-        'default' => 'file',
+        'default' => 'inline_css',
         'sanitize_callback' => 'yatri_sanitize_select',
     )
 );
