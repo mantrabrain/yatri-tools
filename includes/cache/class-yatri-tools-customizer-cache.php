@@ -17,7 +17,7 @@ class Yatri_Tools_Customizer_Cache
         add_action('customize_register', array($this, 'add_panel'));
         add_action('customize_register', array($this, 'add_section'));
 
-        add_action('customize_save_after', array($this, 'write_file'), 20);
+        add_action('customize_save_after', array(__CLASS__, 'write_file'), 20);
         add_action('yatri_theme_dynamic_css_enable', array($this, 'inline_dynamic_css'));
         add_action('yatri_scripts_styles', array($this, 'enqueue_dynamic_css'));
 
@@ -97,9 +97,9 @@ class Yatri_Tools_Customizer_Cache
     }
 
 
-    public function write_file()
+    public static function write_file()
     {
-        $yatri_tools_customizer_css_cache_type = $this->get_cache_type();
+        $yatri_tools_customizer_css_cache_type = self::get_instance()->get_cache_type();
 
         if ('file' != $yatri_tools_customizer_css_cache_type) {
             return;
@@ -110,7 +110,7 @@ class Yatri_Tools_Customizer_Cache
         }
         $created = get_option('yatri_tools_upload_dir_created');
         if ('yes' == $created) {
-            $filesystem = $this->get_filesystem();
+            $filesystem = self::get_instance()->get_filesystem();
             yatri_init_customizer_options();
             $css = yatri_get_all_dynamic_css();
 

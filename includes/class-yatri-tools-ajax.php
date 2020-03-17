@@ -41,6 +41,8 @@ class Yatri_Tools_Ajax
 
         set_theme_mod(YATRI_THEME_SETTINGS, $all_theme_mod);
 
+        Yatri_Tools_Customizer_Cache::write_file();
+
         wp_send_json_success();
 
 

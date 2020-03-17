@@ -41,7 +41,7 @@ final class Yatri_Tools
         $this->define('YATRI_TOOLS_BASENAME', plugin_basename(YATRI_TOOLS_FILE));
         $this->define('YATRI_TOOLS_UPLOAD_DIR', $upload_dir['basedir'] . '/yatri-tools-upload/');
         $this->define('YATRI_TOOLS_DYNAMIC_CSS_PATH', YATRI_TOOLS_UPLOAD_DIR . 'yatri-tools-dynamic.css');
-        $this->define('YATRI_TOOLS_DYNAMIC_CSS_URI',  set_url_scheme($upload_dir['baseurl']) . '/yatri-tools-upload/yatri-tools-dynamic.css');
+        $this->define('YATRI_TOOLS_DYNAMIC_CSS_URI', set_url_scheme($upload_dir['baseurl']) . '/yatri-tools-upload/yatri-tools-dynamic.css');
 
 
     }
@@ -81,6 +81,15 @@ final class Yatri_Tools
 
         add_action('init', array($this, 'load_plugin_textdomain'));
 
+        add_filter('everest_forms_enable_setup_wizard', array($this, 'everest_form_redirect'));
+
+    }
+
+    public function everest_form_redirect($status)
+    {
+
+        delete_transient('_evf_activation_redirect');
+        return false;
     }
 
 
