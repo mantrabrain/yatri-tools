@@ -3,7 +3,7 @@ Contributors: Mantrabrain
 Tags: demo import, tools, elementor template library
 Requires at least: 4.7
 Tested up to: 5.3.2
-Stable tag: 1.0.10
+Stable tag: 1.0.11
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -31,6 +31,9 @@ Extend Yatri theme feature with demo importer functionality, prebuilt header tem
 
 
 == Changelog ==
+
+= 1.0.11 | 2020/03/17 =
+* Fixed: Make default css inline
 
 = 1.0.10 | 2020/03/16 =
 * Fixed: Undefined variable issue fixed
