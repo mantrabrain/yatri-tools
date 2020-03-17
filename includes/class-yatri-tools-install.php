@@ -101,7 +101,7 @@ final class Yatri_Tools_Install
                 }
             }
         }
-        if ($has_created_dir) {
+        if (file_exists(trailingslashit(YATRI_TOOLS_UPLOAD_DIR)) . 'index.html') {
             update_option('yatri_tools_upload_dir_created', 'yes');
         }
 

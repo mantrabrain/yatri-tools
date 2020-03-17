@@ -37,12 +37,11 @@ final class Yatri_Tools
     {
         $upload_dir = wp_upload_dir(null, false);
 
-
         $this->define('YATRI_TOOLS_ABSPATH', dirname(YATRI_TOOLS_FILE) . '/');
         $this->define('YATRI_TOOLS_BASENAME', plugin_basename(YATRI_TOOLS_FILE));
         $this->define('YATRI_TOOLS_UPLOAD_DIR', $upload_dir['basedir'] . '/yatri-tools-upload/');
         $this->define('YATRI_TOOLS_DYNAMIC_CSS_PATH', YATRI_TOOLS_UPLOAD_DIR . 'yatri-tools-dynamic.css');
-        $this->define('YATRI_TOOLS_DYNAMIC_CSS_URI', $upload_dir['baseurl'] . '/yatri-tools-upload/yatri-tools-dynamic.css');
+        $this->define('YATRI_TOOLS_DYNAMIC_CSS_URI',  set_url_scheme($upload_dir['baseurl']) . '/yatri-tools-upload/yatri-tools-dynamic.css');
 
 
     }

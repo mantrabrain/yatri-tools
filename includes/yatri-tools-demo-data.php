@@ -24,6 +24,11 @@ function yatri_tools_demo_data_config()
                         'init' => 'elementor/elementor.php',
                         'name' => 'Elementor',
                     ),
+                    array(
+                        'slug' => 'everest-forms',
+                        'init' => 'everest-forms/everest-forms.php',
+                        'name' => 'Everest Forms',
+                    )
 
                 )
             ),
@@ -45,6 +50,11 @@ function yatri_tools_demo_data_config()
                         'init' => 'elementor/elementor.php',
                         'name' => 'Elementor',
                     ),
+                    array(
+                        'slug' => 'everest-forms',
+                        'init' => 'everest-forms/everest-forms.php',
+                        'name' => 'Everest Forms',
+                    )
 
                 )
             ),
@@ -250,6 +260,50 @@ function yatri_tools_demo_data_config()
                 )
             ),
         ),
+        'classic' => array(
+            'categories' => array('Classic', 'Business', 'Agency'),
+            'xml_file' => $demo_data_root_path . 'classic/content.xml',
+            'theme_settings' => $demo_data_root_path . 'classic/customizer.dat',
+            'widgets_file' => $demo_data_root_path . 'classic/widgets.wie',
+            'screenshot' => $demo_data_root_path . 'classic/screenshot.png',
+            'home_title' => 'Home',
+            'blog_title' => 'Blog',
+            'posts_to_show' => '5',
+            'elementor_width' => '1140',
+            'required_plugins' => array(
+                'free' => array(
+                    array(
+                        'slug' => 'elementor',
+                        'init' => 'elementor/elementor.php',
+                        'name' => 'Elementor',
+                    ),
+                    array(
+                        'slug' => 'everest-forms',
+                        'init' => 'everest-forms/everest-forms.php',
+                        'name' => 'Everest Forms',
+                    )
+
+                ),
+                'premium' => array(
+                    array(
+                        'slug' => 'yatri-typography-addon',
+                        'init' => 'yatri-typography-addon/yatri-typography-addon.php',
+                        'name' => 'Yatri Typography Addon',
+                    ),
+                    array(
+                        'slug' => 'yatri-agency-elementor-addon',
+                        'init' => 'yatri-agency-elementor-addon/yatri-agency-elementor-addon.php',
+                        'name' => 'Yatri Agency Elementor Addon',
+                    ),
+                    array(
+                        'slug' => 'yatri-social-sharing-addon',
+                        'init' => 'yatri-social-sharing-addon/yatri-social-sharing-addon.php',
+                        'name' => 'Yatri Social Sharing Addon',
+                    ),
+
+                )
+            ),
+        ),
 
     );
 }
@@ -266,7 +320,7 @@ function yatri_tools_all_header_templates()
     try {
         $response_data = json_decode($response_data_string, true);
 
-        if(!is_array($response_data)){
+        if (!is_array($response_data)) {
             return array();
         }
 
