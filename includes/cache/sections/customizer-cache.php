@@ -14,7 +14,7 @@ $wp_customize->add_control('yatri_tools_customizer_css_cache_type',
         'type' => 'select',
         'priority' => 80,
         'choices' => array(
-            //'file' => esc_html__('Seperate CSS file', 'yatri_tools'),
+            'file' => esc_html__('Seperate CSS file', 'yatri_tools'),
             'inline_css' => esc_html__('Inline CSS', 'yatri_tools')
         )
     )
