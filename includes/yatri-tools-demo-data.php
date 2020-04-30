@@ -239,27 +239,6 @@ function yatri_tools_demo_data_config()
                 )
             ),
         ),
-        'blog' => array(
-            'categories' => array('Elementor', 'Blog'),
-            'xml_file' => $demo_data_root_path . 'blog/content.xml',
-            'theme_settings' => $demo_data_root_path . 'blog/customizer.dat',
-            'widgets_file' => $demo_data_root_path . 'blog/widgets.wie',
-            'screenshot' => $demo_data_root_path . 'blog/screenshot.png',
-            'home_title' => 'Home',
-            'blog_title' => 'Blog',
-            'posts_to_show' => '5',
-            'elementor_width' => '1140',
-            'required_plugins' => array(
-                'free' => array(
-                    array(
-                        'slug' => 'elementor',
-                        'init' => 'elementor/elementor.php',
-                        'name' => 'Elementor',
-                    )
-
-                )
-            ),
-        ),
         'classic' => array(
             'categories' => array('Classic', 'Business', 'Agency'),
             'xml_file' => $demo_data_root_path . 'classic/content.xml',
@@ -300,6 +279,27 @@ function yatri_tools_demo_data_config()
                         'init' => 'yatri-social-sharing-addon/yatri-social-sharing-addon.php',
                         'name' => 'Yatri Social Sharing Addon',
                     ),
+
+                )
+            ),
+        ),
+        'blog' => array(
+            'categories' => array('Elementor', 'Blog'),
+            'xml_file' => $demo_data_root_path . 'blog/content.xml',
+            'theme_settings' => $demo_data_root_path . 'blog/customizer.dat',
+            'widgets_file' => $demo_data_root_path . 'blog/widgets.wie',
+            'screenshot' => $demo_data_root_path . 'blog/screenshot.png',
+            'home_title' => 'Home',
+            'blog_title' => 'Blog',
+            'posts_to_show' => '5',
+            'elementor_width' => '1140',
+            'required_plugins' => array(
+                'free' => array(
+                    array(
+                        'slug' => 'elementor',
+                        'init' => 'elementor/elementor.php',
+                        'name' => 'Elementor',
+                    )
 
                 )
             ),

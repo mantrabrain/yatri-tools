@@ -25,6 +25,8 @@ class Yatri_Tools_Customizer_Cache
 
     public function enqueue_dynamic_css($script)
     {
+        return $script;
+
         if (is_customize_preview()) {
             return $script;
         }
@@ -43,6 +45,7 @@ class Yatri_Tools_Customizer_Cache
 
     public function inline_dynamic_css()
     {
+        return true;
         if (is_customize_preview()) {
             return true;
         }

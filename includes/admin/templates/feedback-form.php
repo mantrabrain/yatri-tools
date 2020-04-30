@@ -1,4 +1,4 @@
-<form class="yatri-tools-demo-success-feedback" method="post">
+<form class="yatri-tools-demo-success-feedback" method="post" style="display:none;">
     <?php
     echo wp_nonce_field('yatri_tools_demo_import_success_feedback_form') ?>
     <input type="hidden" name="admin_email" value="<?php echo esc_attr($form_data['admin_email']) ?>"/>
@@ -15,3 +15,7 @@
         <?php esc_html_e('Send', 'yatri-tools'); ?>
     </button>
 </form>
+<p style="font-weight:bold;font-size:16px;">If you have some spare time, can you please write review from here?</p>
+<a style="text-decoration: none;border: none;display: block;padding: 15px;background: #007cba;color: #fff;font-size: 20px;margin: 20px 0;border-radius: 50px;"
+   href="https://wordpress.org/support/theme/yatri/reviews/?filter=5"
+   target="_blank"><?php esc_html_e('Yes I Would Like to Write Review', 'yatri-tools'); ?></a>
