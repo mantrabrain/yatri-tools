@@ -1,5 +1,5 @@
 === Yatri Tools ===
-Contributors: Mantrabrain
+Contributors: Mantrabrain, ughimire1
 Tags: demo import, tools, elementor template library
 Requires at least: 4.7
 Tested up to: 5.6
