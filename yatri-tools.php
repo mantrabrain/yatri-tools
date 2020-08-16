@@ -23,7 +23,7 @@ if (!defined('YATRI_TOOLS_FILE')) {
 
 // Define YATRI_TOOLS_VERSION.
 if (!defined('YATRI_TOOLS_VERSION')) {
-    define('YATRI_TOOLS_VERSION', '1.0.12');
+    define('YATRI_TOOLS_VERSION', '1.1.0');
 }
 
 // Define YATRI_TOOLS_PLUGIN_URI.
@@ -48,8 +48,8 @@ if (!class_exists('Yatri_Tools')) {
  *
  * Returns the main instance of Yatri_Tools to prevent the need to use globals.
  *
- * @since 1.0.0
  * @return Yatri_Tools
+ * @since 1.0.0
  */
 function yatri_tools_instance()
 {

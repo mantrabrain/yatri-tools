@@ -2,8 +2,8 @@
 Contributors: Mantrabrain
 Tags: demo import, tools, elementor template library
 Requires at least: 4.7
-Tested up to: 5.4.1
-Stable tag: 1.0.12
+Tested up to: 5.6
+Stable tag: 1.1.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -31,6 +31,9 @@ Extend Yatri theme feature with demo importer functionality, prebuilt header tem
 
 
 == Changelog ==
+
+= 1.1.0 | 2020/08/16 =
+* Fixed: Version tested
 
 = 1.0.12 | 2020/04/30 =
 * Fixed: minor issue fixed
