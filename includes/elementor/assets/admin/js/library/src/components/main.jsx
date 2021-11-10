@@ -83,11 +83,18 @@ class Yatri_Tools_Elementor_Main_Component extends Component {
             body: 'action=yatri_tools_elementor_fetch_tmpl_data&item_id=' + item.id
         }).then(response => response.json())
             .then((tmpl) => {
-                window.yatriToolsElementorModal.hide(),
-                    elementor.sections.currentView.addChildModel(tmpl.data.template.content)
+                window.yatriToolsElementorModal.hide();
+                elementor.getPreviewView().addChildModel(tmpl.data.template.content);
+
+                window.$e.internal('document/save/set-is-modified', {
+                    status: true
+                });
+                // elementor.sections.currentView.addChildModel(tmpl.data.template.content);
+                //debugger;
                 this.updateView('home');
             })
             .catch(function (error) {
+                debugger;
                 console.log('Something went wrong!');
                 console.log(JSON.stringify(error));
             });
@@ -104,20 +111,22 @@ class Yatri_Tools_Elementor_Main_Component extends Component {
         switch (view) {
             case 'home':
                 return <Yatri_Tools_Elementor_Modal_Component data={this.state.modalData}
-                             onClick={(templates) => this.showKit(templates)}/>
+                                                              onClick={(templates) => this.showKit(templates)}/>
             case 'templates':
                 return <Yatri_Tools_Elementor_Modal_Tab_Pages_Component
                     onUpdateView={(view) => this.updateView(view)}
                     data={this.state.selectedTemplate} onClick={(item) => this.importJson(item)}
-                              onPreview={(url) => this.showDemo(url)}/>
+                    onPreview={(url) => this.showDemo(url)}/>
             case 'blocks':
-                return <Yatri_Tools_Elementor_Modal_Tab_Blocks_Component data={this.state.blocks} onClick={(item) => this.importJson(item)}
-                               onPreview={(url) => this.showDemo(url)}/>
+                return <Yatri_Tools_Elementor_Modal_Tab_Blocks_Component data={this.state.blocks}
+                                                                         onClick={(item) => this.importJson(item)}
+                                                                         onPreview={(url) => this.showDemo(url)}/>
             case 'preview':
                 return <Yatri_Tools_Elementor_Modal_Tab_Preview_Component
-                    onUpdateView={(view) => this.updateView(view)} data={this.state.preview} onClick={(item) => this.importJson(item)}
-                                onResponsive={(type) => this.responsiveIframe(type)}
-                                iframeType={this.state.responsive}/>
+                    onUpdateView={(view) => this.updateView(view)} data={this.state.preview}
+                    onClick={(item) => this.importJson(item)}
+                    onResponsive={(type) => this.responsiveIframe(type)}
+                    iframeType={this.state.responsive}/>
             case 'loading':
                 return <Loader/>
         }
@@ -192,6 +201,7 @@ class Yatri_Tools_Elementor_Main_Component extends Component {
 }
 
 export default Yatri_Tools_Elementor_Main_Component
+
 function updateView(view) {
     if (view != this.state.renderView) {
         this.setState({
