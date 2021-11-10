@@ -89,8 +89,7 @@ class Yatri_Tools_Elementor_Main_Component extends Component {
                 window.$e.internal('document/save/set-is-modified', {
                     status: true
                 });
-                // elementor.sections.currentView.addChildModel(tmpl.data.template.content);
-                //debugger;
+              
                 this.updateView('home');
             })
             .catch(function (error) {
