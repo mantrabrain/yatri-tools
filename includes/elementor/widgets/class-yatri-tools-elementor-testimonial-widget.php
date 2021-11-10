@@ -48,7 +48,7 @@ class Yatri_Tools_Elementor_Testimonial_Widget extends Widget_Base
         return ['yatri-tools-elementor-slickcss', 'yte-testimonial'];
     }
 
-    protected function _register_controls()
+    protected function register_controls()
     {
         $this->start_controls_section(
             'section_testimonials',
