@@ -5,7 +5,7 @@
 
 namespace Yatri_Tools_Elementor\Widgets;
 use Elementor\Widget_Base;
-use \Elementor\Scheme_Typography as Scheme_Typography;
+use \Elementor\Core\Schemes\Typography as Typography;
 use \Elementor\Controls_Manager as Controls_Manager;
 use \Elementor\Group_Control_Typography as Group_Control_Typography;
 
@@ -169,7 +169,7 @@ class Yatri_Tools_Elementor_Skillbar_Widget extends Widget_Base {
 			[
 				'name' 			=> 'skillbar_title',
 				'selector' 		=> '{{WRAPPER}} .yte-skillbar',
-				'scheme' 		=> Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' 		=> Typography::TYPOGRAPHY_1,
 			]
 		);
 

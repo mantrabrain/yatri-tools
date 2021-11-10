@@ -7,8 +7,8 @@ use Elementor\Controls_Manager;
 use \Elementor\Utils as Utils;
 use Elementor\Repeater as Repeater;
 use Elementor\Group_Control_Typography;
-use Elementor\Scheme_Typography;
-use Elementor\Scheme_Color;
+use Elementor\Core\Schemes\Typography;
+use Elementor\Core\Schemes\Color;
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Image_Size;
 
@@ -515,7 +515,7 @@ class Yatri_Tools_Elementor_Testimonial_Widget extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'testimonial_typography',
-                'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+                'scheme' => Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .yatri-tools-elementor-testimonial .yte-testimonial-slide .yte-person-testimonial blockquote',
             ]
         );
@@ -547,7 +547,7 @@ class Yatri_Tools_Elementor_Testimonial_Widget extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'author_typography',
-                'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+                'scheme' => Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .yatri-tools-elementor-testimonial .yte-person-name',
             ]
         );
@@ -578,7 +578,7 @@ class Yatri_Tools_Elementor_Testimonial_Widget extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'author_title_typography',
-                'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+                'scheme' => Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .yatri-tools-elementor-testimonial .yte-person-title',
             ]
         );

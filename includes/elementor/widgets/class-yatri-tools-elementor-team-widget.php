@@ -6,8 +6,8 @@ use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Utils as Utils;
 use Elementor\Repeater as Repeater;
-use Elementor\Scheme_Color;
-use Elementor\Scheme_Typography;
+use Elementor\Core\Schemes\Color;
+use Elementor\Core\Schemes\Typography;
 use Elementor\Group_Control_Background;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Image_Size;
@@ -491,8 +491,8 @@ class Yatri_Tools_Elementor_Team_Widget extends Widget_Base
                 'label' => __('Color', 'yatri-tools'),
                 'type' => Controls_Manager::COLOR,
                 'scheme' => [
-                    'type' => Scheme_Color::get_type(),
-                    'value' => Scheme_Color::COLOR_1,
+                    'type' => Color::get_type(),
+                    'value' => Color::COLOR_1,
                 ],
                 'default' => '#343434',
                 'selectors' => [
@@ -505,7 +505,7 @@ class Yatri_Tools_Elementor_Team_Widget extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'team_name_typography',
-                'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+                'scheme' => Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .yatri-tools-elementor-team .person-name',
             ]
         );
@@ -552,8 +552,8 @@ class Yatri_Tools_Elementor_Team_Widget extends Widget_Base
                 'label' => __('Color', 'yatri-tools'),
                 'type' => Controls_Manager::COLOR,
                 'scheme' => [
-                    'type' => Scheme_Color::get_type(),
-                    'value' => Scheme_Color::COLOR_1,
+                    'type' => Color::get_type(),
+                    'value' => Color::COLOR_1,
                 ],
                 'default' => '#999A9C',
                 'selectors' => [
@@ -566,7 +566,7 @@ class Yatri_Tools_Elementor_Team_Widget extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'team_designation_typography',
-                'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+                'scheme' => Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .yatri-tools-elementor-team .person-designation',
             ]
         );
@@ -616,8 +616,8 @@ class Yatri_Tools_Elementor_Team_Widget extends Widget_Base
                 'label' => __('Color', 'yatri-tools'),
                 'type' => Controls_Manager::COLOR,
                 'scheme' => [
-                    'type' => Scheme_Color::get_type(),
-                    'value' => Scheme_Color::COLOR_1,
+                    'type' => Color::get_type(),
+                    'value' => Color::COLOR_1,
                 ],
                 'default' => '#343434',
                 'selectors' => [
@@ -630,7 +630,7 @@ class Yatri_Tools_Elementor_Team_Widget extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'team_about_typography',
-                'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+                'scheme' => Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .yatri-tools-elementor-team .person-about',
             ]
         );
@@ -750,8 +750,8 @@ class Yatri_Tools_Elementor_Team_Widget extends Widget_Base
                 'label' => __('Icon Color', 'yatri-tools'),
                 'type' => Controls_Manager::COLOR,
                 'scheme' => [
-                    'type' => Scheme_Color::get_type(),
-                    'value' => Scheme_Color::COLOR_1,
+                    'type' => Color::get_type(),
+                    'value' => Color::COLOR_1,
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .yatri-tools-elementor-team .social-icons-wrapper a i' => 'color: {{VALUES}}',

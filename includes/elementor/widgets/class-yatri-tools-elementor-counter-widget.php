@@ -6,8 +6,8 @@ use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use \Elementor\Utils as Utils;
 use \Elementor\Group_Control_Typography;
-use \Elementor\Scheme_Typography;
-use \Elementor\Scheme_Color;
+use \Elementor\Core\Schemes\Typography;
+use \Elementor\Core\Schemes\Color;
 use \Elementor\Group_Control_Border;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
@@ -294,8 +294,8 @@ class Yatri_Tools_Elementor_Counter_Widget extends Widget_Base
                 'label' => __('Color', 'yatri-tools'),
                 'type' => Controls_Manager::COLOR,
                 'scheme' => [
-                    'type' => Scheme_Color::get_type(),
-                    'value' => Scheme_Color::COLOR_1,
+                    'type' => Color::get_type(),
+                    'value' => Color::COLOR_1,
                 ],
                 'default' => '#000',
                 'selectors' => [
@@ -308,7 +308,7 @@ class Yatri_Tools_Elementor_Counter_Widget extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'counter_typography',
-                'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+                'scheme' => Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .yatri-tools-elementor-counter .counter *',
             ]
         );
@@ -343,8 +343,8 @@ class Yatri_Tools_Elementor_Counter_Widget extends Widget_Base
                 'label' => __('Color', 'yatri-tools'),
                 'type' => Controls_Manager::COLOR,
                 'scheme' => [
-                    'type' => Scheme_Color::get_type(),
-                    'value' => Scheme_Color::COLOR_1,
+                    'type' => Color::get_type(),
+                    'value' => Color::COLOR_1,
                 ],
                 'default' => '#000',
                 'selectors' => [
@@ -357,7 +357,7 @@ class Yatri_Tools_Elementor_Counter_Widget extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'title_typography',
-                'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+                'scheme' => Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .yatri-tools-elementor-counter .counter-title',
             ]
         );
