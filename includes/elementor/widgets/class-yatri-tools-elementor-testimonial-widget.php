@@ -751,7 +751,7 @@ class Yatri_Tools_Elementor_Testimonial_Widget extends Widget_Base
         echo '</div>';
     }
 
-    protected function _content_template()
+    protected function content_template()
     {
     }
 }

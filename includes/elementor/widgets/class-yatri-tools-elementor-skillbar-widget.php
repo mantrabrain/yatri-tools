@@ -254,7 +254,7 @@ class Yatri_Tools_Elementor_Skillbar_Widget extends Widget_Base {
 	<?php
 	}
 
-	protected function _content_template() { ?>
+	protected function content_template() { ?>
 		<#
 			var wrap_classes = 'yte-skillbar clr';
 
