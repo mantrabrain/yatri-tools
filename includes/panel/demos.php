@@ -232,7 +232,7 @@ if (!class_exists('Yatri_Tools_Demos')) {
          *
          * @since 1.0.0
          */
-        public static function ajax_demo_data()
+        public function ajax_demo_data()
         {
 
             if (!current_user_can('manage_options') || !wp_verify_nonce($_GET['demo_data_nonce'], 'get-demo-data')) {
@@ -281,8 +281,8 @@ if (!class_exists('Yatri_Tools_Demos')) {
                         <p><?php esc_html_e('For your site to look exactly like this demo, the plugins below need to be activated.', 'yatri-tools-toolkit'); ?></p>
                         <div class="yatri-tools-required-plugins yatri-tools-plugin-installer">
                             <?php
-                            self::required_plugins($free, 'free');
-                            self::required_plugins($premium, 'premium'); ?>
+                            $this->required_plugins($free, 'free');
+                            $this->required_plugins($premium, 'premium'); ?>
                         </div>
                     </div>
 

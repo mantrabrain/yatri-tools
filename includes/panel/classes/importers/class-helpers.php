@@ -102,6 +102,9 @@ class Yatri_Tools_Demos_Helpers
             }
         }
 
+        if (is_wp_error($response)) {
+            return false;
+        }
         // If all went well, then return the headers of the request.
         if (isset($response['headers'])) {
             $response['headers']['response'] = $response['response']['code'];
