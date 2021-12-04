@@ -25,5 +25,7 @@
 /assets/node_modules  export-ignore
 /node_modules  export-ignore
 /pax_global_header  export-ignore
-/yatra.tar  export-ignore
-/yatra.zip  export-ignore
+/yatri-tools.tar  export-ignore
+/yatri-tools.zip  export-ignore
+/includes/elementor/assets/admin/js/library  export-ignore
+

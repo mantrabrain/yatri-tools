@@ -2,8 +2,8 @@
 Contributors: Mantrabrain, ughimire1
 Tags: demo import, tools, elementor template library
 Requires at least: 4.7
-Tested up to: 5.6
-Stable tag: 1.1.1
+Tested up to: 5.8.2
+Stable tag: 1.1.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -32,39 +32,7 @@ Extend Yatri theme feature with demo importer functionality, prebuilt header tem
 
 == Changelog ==
 
-= 1.1.1 | 2020/11/30 =
-* Fixed: Freemius sdk updated
-
-= 1.1.0 | 2020/08/16 =
-* Fixed: Version tested
-
-= 1.0.12 | 2020/04/30 =
-* Fixed: minor issue fixed
-
-= 1.0.11 | 2020/03/17 =
-* Fixed: Make default css inline
-
-= 1.0.10 | 2020/03/16 =
-* Fixed: Undefined variable issue fixed
-
-= 1.0.9 | 2020/03/15 =
-* Header templates added
-
-= 1.0.7 | 2020/03/11 =
-* Update demos config & minor issue fixed
-
-= 1.0.6 | 2020/03/05 =
-* Update demos config & minor issue fixed
-
-= 1.0.5 | 2020/02/12 =
-* Fix - Minor issue fixed
-
-= 1.0.4 | 2020/02/12 =
-* Update elementor block
-
-= 1.0.3 | 2020/02/12 =
-* Update plugin add issue
-* Update elementor block
-
-= 1.0.0 | 2020/02/01 =
-* Initial release
+= 1.1.2 | 2021/12/04 =
+* Fixed: Elementor compatibility issue fixed
+* Fixed: PHP & WordPress compatibility check and fixed
+* Fixed: Import template issue fixed
