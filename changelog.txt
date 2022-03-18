@@ -1,3 +1,7 @@
+= 1.1.2 | 2021/12/04 =
+* Fixed: Elementor compatibility issue fixed
+* Fixed: PHP & WordPress compatibility check and fixed
+* Fixed: Import template issue fixed
 
 = 1.1.0 | 2020/08/16 =
 * Fixed: Version tested
